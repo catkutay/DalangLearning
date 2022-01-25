@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Word</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <form [formGroup]="createWordForm" (submit)="createWord()">
+    <ion-item>
+      <ion-label stacked>English</ion-label>
+      <ion-input formControlName="english" type="text" placeholder="What's this word in English?"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Language</ion-label>
+      <ion-input formControlName="language" type="text" placeholder="How is this word in your Language written as text?"> </ion-input>
+    </ion-item>
+ 
+    
+    <ion-item>
+      <ion-label stacked>Examples</ion-label>
+      <ion-input formControlName="example" type="text" placeholder="Give an example?"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Word Part of Speech</ion-label>
+      <ion-textarea formControlName="partOfSpeech" type="text"
+        placeholder="What's this word's role in a sentence - part of speech?"> </ion-textarea>
+    </ion-item>
+    <ion-button expand="block" type="submit" [disabled]="!createWordForm.valid"> Add Word </ion-button>
+  </form>
+</ion-content>

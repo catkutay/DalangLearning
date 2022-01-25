@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  
+    <ion-title>{{ word?.english }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h3>Translation</h3>
+  <p>The word {{ word?.english }} is translated as <strong>{{ word?.language }}</strong>.</p>
+<div *ngIf=" word?.example; ">
+   <h3>Example</h3>
+  <p>It is used in an example as {{ word?.example }}.</p>
+</div>
+
+<ion-button expand="full" (click)="startRecording(word?.language+'.wav')" [disabled]=" recording"> Start Recording {{word?.language+'.wav'}}</ion-button>
+<ion-button expand="full" (click)="stopRecording(word?.language+'.wav')" [disabled]=" !recording"> Stop Recording </ion-button>
+<ion-item-sliding *ngIf=" findFile(word?.language+'.wav'); else conditionFalse ">
+  
+  <ion-item (click)="playFile(word?.language+'.wav')">
+    <ion-icon name="mic" slot="start" ></ion-icon>
+    <ion-label class="ion-text-wrap">
+      {{word?.language+'.wav'}}
+    </ion-label>
+</ion-item>
+  <ion-item-options side="start">
+    <ion-item-option (click)="deleteFile(word?.language+'.wav')" color="danger">
+      <ion-icon name="trash" slot="icon-only"></ion-icon>
+    </ion-item-option>
+  </ion-item-options>
+
+
+  <ion-item-options side="end">
+    <ion-item-option (click)="uploadFile(word?.language+'.wav')" color="primary">
+      <ion-icon name="cloud-upload" slot="icon-only"></ion-icon>
+    </ion-item-option>
+  </ion-item-options>
+  
+ 
+  </ion-item-sliding>
+  <ng-template #conditionFalse>
+   
+  </ng-template>
+
+
+</ion-content>

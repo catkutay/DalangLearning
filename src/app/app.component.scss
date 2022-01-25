@@ -1,0 +1,206 @@
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 767px) {
+  ion-card {
+    width: 600px;
+    margin: auto;
+  }
+}
+ion-card {
+  --background: #fff;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  overflow: scroll;
+}
+.input {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 9px;
+  font-size: 0.9em !important;
+}
+.otpinput {
+  letter-spacing: 30px;
+  -webkit-padding-end: 0;
+  --padding-end: 0;
+  font-size: 30px;
+  border: none;
+  background: white;
+}
+.white {
+  color: white;
+}
+.OTP-border {
+  ion-col {
+    div {
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+.small {
+  font-size: 13px;
+  a {
+    text-decoration: unset !important;
+  }
+}
+.button-color {
+  background-color: var(--ion-color-mytheme);
+}
+.logo {
+  width: 1.25em !important;
+}
+.grid {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.img-logo {
+  height: 120px;
+  width: 120px;
+}
+.fire-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.bold {
+  font-weight: bold;
+}
+.block {
+  display: block;
+}
+.transition {
+  background: linear-gradient(to right, #f57c00 14%, #ffca00 96%);
+}
+.btn-color {
+  color: #ffa000;
+}
+.error {
+  color: red;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+
+.invoice-box {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+  color: #555;
+}
+
+.invoice-box table {
+  width: 100%;
+  line-height: inherit;
+  text-align: left;
+}
+
+.invoice-box table td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+.invoice-box table tr td:nth-child(2) {
+  text-align: right;
+}
+
+.invoice-box table tr.top table td {
+  padding-bottom: 20px;
+}
+.btn-transition {
+  background: linear-gradient(to right, #f57c00 14%, #ffca00 96%);
+}
+
+.input {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 9px;
+  font-size: 0.9em !important;
+}
+.phoneCountry {
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  margin-left: 2px;
+}
+.phoneAuthGrid {
+  border: 1px solid #ccc;
+  margin: 0 7px;
+  border-radius: 3px;
+}
+.invoice-box table tr.top table td.title {
+  font-size: 45px;
+  line-height: 45px;
+  color: #333;
+}
+
+.invoice-box table tr.information table td {
+  padding-bottom: 40px;
+}
+
+.invoice-box table tr.heading td {
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.invoice-box table tr.details td {
+  padding-bottom: 20px;
+}
+
+.invoice-box table tr.item td{
+  border-bottom: 1px solid #eee;
+}
+
+.invoice-box table tr.item.last td {
+  border-bottom: none;
+}
+
+.invoice-box table tr.total td:nth-child(2) {
+  border-top: 2px solid #eee;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .invoice-box table tr.top table td {
+      width: 100%;
+      display: block;
+      text-align: center;
+  }
+  
+  .invoice-box table tr.information table td {
+      width: 100%;
+      display: block;
+      text-align: center;
+  }
+}
+
+/** RTL **/
+.rtl {
+  direction: rtl;
+  font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+}
+
+.rtl table {
+  text-align: right;
+}
+
+.rtl table tr td:nth-child(2) {
+  text-align: left;
+}

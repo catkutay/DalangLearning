@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ word?.english }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h3>Translation</h3>
+  <p>The word {{ word?.english }} is translated as {{ word?.language }}</p>
+<h3> Audio:</h3>
+<div *ngIf=" word?.audio; else conditionFalse ">
+
+
+<p>Listen to  <ion-button (click)=" playFile(word?.audio) ">{{ word?.audio }}</ion-button></p>
+<ion-button (click)=" recordFile() ">Re-record Audio</ion-button>
+</div> 
+<ng-template #conditionFalse>
+<ion-button (click)=" recordFile() ">Record Audio</ion-button>
+
+</ng-template>
+<div *ngIf=" word?.example; ">
+<h3>Example</h3>
+  <p>It is used in an example as {{ word?.example }}.</p>
+</div>
+<div *ngIf=" word?.partOfSpeech; ">
+  <h3>Part of Speech</h3>
+  <p>{{ word?.partOfSpeech }}</p>
+</div>
+
+
+<ion-button  (click)="updateWord()"> SAVE Word </ion-button>
+
+  <ion-button  (click)="deleteWord(word.id, word.language)"> DELETE Word </ion-button>
+
+</ion-content>

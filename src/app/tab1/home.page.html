@@ -1,0 +1,24 @@
+
+
+ <ion-header>
+    <ion-toolbar>
+      <ion-title>Word List</ion-title>
+      <ion-buttons slot="end">
+        <ion-button routerLink="/create">
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+      <ion-content >
+    
+      <ion-item *ngFor="let word of wordList | async" routerLink="/detail/{{word.id}}">
+        <ion-label>
+          <h2>{{ word.english}}</h2>
+          <p>Translation: {{ word.language }}</p>
+        </ion-label>
+      </ion-item>
+      
+    </ion-content>
+ 
+
